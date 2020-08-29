@@ -13,3 +13,6 @@ set(GLFW_INSTALL OFF CACHE BOOL "" FORCE)
 
 add_subdirectory(ext/glfw)
 target_link_libraries(${PROJECT_NAME} glfw)
+
+add_subdirectory(ext/glad)
+target_link_libraries(${PROJECT_NAME} glad)
