@@ -70,6 +70,8 @@ int main(int argc, char** argv)
         return -1;
     }
 
+    std::cout << "Welcome to AniEngine, ver 0.1" << std::endl;
+    std::cout << "This is Alpha Build!" << std::endl;
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
     std::cout << "OpenGL ver: " << glGetString(GL_VERSION) << std::endl;
 
@@ -83,6 +85,8 @@ int main(int argc, char** argv)
             std::cerr << "Can't create shader program: " << "DefaultShader" << std::endl;
             return -1;
         }
+
+        resourceManager.loadTexture("TestTexture", "res/textures/map_16x16.png");
 
         GLuint points_vbo = 0;
         glGenBuffers(1, &points_vbo);
